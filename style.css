@@ -1,0 +1,251 @@
+*{
+ margin: 0;
+ padding: 0;
+ background-size:100% 100%;
+ background-position:center;
+ background-repeat:no-repeat;
+ position: absolute;
+ perspective:-1000px;
+ transform-style: preserve-3d;
+ transform-origin:top;
+ 
+}
+
+body {
+ width: 100vw;
+ height: 100vh;
+ background:url(fondo.png) 100% 100%;
+}
+
+.caja{
+ width: 300px;
+ height: 400px;
+ margin: auto;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ animation:girar 10s linear infinite;
+}
+
+@keyframes girar{
+ from{
+  transform:rotatey(0deg);
+ }
+ to{
+  transform:rotatey(360deg);
+ }
+}
+
+.cabeza,.cara,.oreja,.nuca{
+ width: 100px;
+ height: 100px;
+ background-image: url(cara.png);
+ border:solid 0.1px;
+ margin: auto;
+ left: 0;
+ right: 0;
+}
+
+.cara{
+ transform:translatez(50px);
+}
+
+.nuca{
+ background-image: url(nuca.png);
+ transform:translatez(-50px);
+}
+
+.oreja{
+ background-image: url(oreja.png);
+ transform:rotatey(-90deg);
+ left: -100px;
+}
+
+.dos{
+  transform:rotatey(-90deg);
+  left: 50px;
+}
+
+.cuerpo,.frente,.espalda{
+ width: 100px;
+ height: 160px;
+ background-image: url(cuerpo.png);
+ border:solid 0.1px;
+ margin: auto;
+ left: 0;
+ right: 0;
+ top: 100px;
+}
+
+.frente{
+ top: 0;
+ transform:translatez(20px);
+}
+
+.espalda{
+ top: 0;
+ background-image: url(espalda.png);
+ transform:translatez(-20px);
+}
+
+.lado,.lado2{
+ width: 40px;
+ height: 160px;
+ background-image: url(lado.png);
+ transform:rotatey(90deg);
+ left: -20px;
+}
+
+.lado2{
+ left: 80px;
+}
+
+.pie,.pieFrente,.pieAtras,.pieLado,
+.pieLado2{
+ width: 50px;
+ height: 150px;
+ border:solid 0.1px;
+}
+
+.pie{
+ top:250px;
+ left:100px;
+ 
+ animation:mover 1s linear infinite;
+}
+
+@keyframes mover{
+ 0%{
+  transform:rotatex(-25deg);
+ }
+ 50%{
+  transform:rotatex(25deg);
+ }
+ 75%{
+  transform:rotatex(0deg);
+ }
+ 100%{
+  transform:rotatex(-25deg);
+ }
+}
+
+.pieFrente{
+ background-image: url(pie.png);
+ transform:translatez(20px);
+}
+
+.pieAtras{
+ background-image: url(pie.png);
+ transform:translatez(-20px);
+}
+
+.pieLado,.pieLado2{
+ width: 40px;
+ background-image: url(pie.png);
+ transform:rotatey(90deg);
+ left: -21px;
+}
+
+.pieLado2{
+ left:30px;
+}
+
+.pie2{
+ top:250px;
+ left:150px;
+ animation:mover 2s linear infinite;
+}
+
+.brazo,.brazoFrente,.brazoFrente2,
+.brazoLado,.brazoLado2{
+ width: 40px;
+ height: 150px;
+ border:solid 0.1px;
+ background-image: url(brazo.png);
+}
+
+.brazo{
+ left:60px;
+ top:100px;
+ animation:mover 2s linear infinite;
+}
+
+.brazoFrente{ 
+ transform:translatez(20px);
+}
+
+.brazoFrente2{
+ transform:translatez(-20px);
+}
+
+.brazoLado,.brazoLado2{
+ transform:rotatey(90deg);
+ left:-20px;
+}
+
+.brazoLado2{
+ left:20px;
+}
+
+.brazo2{
+ left:200px;
+ top:100px;
+ animation:mover 0.5s linear infinite;
+}
+
+.gorra,.guno,.gdos,.gtres,.gcuatro,.gcinco{
+ width: 100px;
+ height: 30px;
+ background: url(rojo.png);
+ margin: auto;
+ left:0;
+ right:0;
+ border:solid 0.1px;
+}
+
+.gorra{
+ top:-30px;
+}
+
+.guno{
+ transform:translatez(-50px);;
+}
+
+.gdos{
+ transform:translatez(50px);
+}
+
+.gtres{
+ transform:rotatey(90deg);
+ left:-100px;
+}
+
+.gcuatro{
+ transform:rotatey(90deg);
+ left:50px;
+}
+
+.gcinco{
+ top:-30px;
+ height: 120px;
+ transform:rotatex(75deg)
+           translatey(-20px)
+           translatez(-40px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
